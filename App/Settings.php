@@ -1,14 +1,14 @@
 <?php
 
 return [
-    'app_title' => 'Forecast API',
+    'app_title' => '',
     'app_description' => '',
     'default_lang' => 'en',
     'db'   => [
-        'host'     => 'localhost',
-        'database' => 'ApiToken',
-        'username' => 'root',
-        'password' => '@Redwing50@',
+        'host'     => '',
+        'database' => '',
+        'username' => '',
+        'password' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
         'prefix' => '',

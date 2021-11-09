@@ -41,7 +41,7 @@ class Router
     }
 
     protected function map() {
-        $replace = trim(dirname($this->request->serverName()), '/');
+        $replace = trim(dirname(dirname($this->request->serverName())), '/');
         $uri = rtrim(str_replace($replace, '', $this->request->getUri()), '/');
         $exp = explode('?', $uri);
         $route = array_shift($exp);
@@ -87,13 +87,13 @@ class Router
                         }
                     }
                 } else {
-                    throw new \AppException(404, 'Unknown page or callable.');
+                    throw new \App\AppException(404, 'Unknown page or callable.');
                 }
                 exit();
             }
         }
 
-        throw new \AppException(404, 'Unknown page or callable.');
+        throw new \App\AppException(404, 'Unknown page or callable.');
     }
 
     public function run() {

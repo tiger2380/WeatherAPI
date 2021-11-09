@@ -5,7 +5,7 @@
 * [Setup](#setup)
 
 ## General Information
-Acceptance Criteria:
+**Acceptance Criteria:**
 * Create an API endpoint - /api/weather/office/forecast
 * Consume the following URL for weather information - https://api.weather.gov/gridpoints/OKX/31,34/forecast
 * Validate token via an “Api-Token” header
@@ -32,4 +32,31 @@ Acceptance Criteria:
 * MySql
 
 ## Setup
-* 
+Make sure that apache is up and running. Navigate to where your apache folder get served.
+For me, it would be **/var/www/** since I'm using linux environment.
+
+**Clone the repo to your local environment**
+```
+$ git clone https://github.com/tiger2380/WeatherAPI.git
+```
+**Navigate into the newly created folder**
+```
+$ cd WeatherAPI
+```
+**Edit the App/Settings.php file -> db stanza to match your local Database settings**
+```
+$ vi App/Settings.php
+...
+'db'   => [
+        'host'     => '', # hostname of your database e.g. 'localhost'
+        'database' => '', # database name 'WeatherAPI'
+        'username' => '', # username of your database e.g. 'root'
+        'password' => '', # password of the user
+        'charset' => 'utf8mb4',
+        'collation' => 'utf8mb4_unicode_ci',
+        'prefix' => '',
+    ]
+...
+```
+* I included the dump of the database (WeatherAPI.sql)
+* To save time, you can import the dump file into your database. Create a new database and name it to "WeatherAPI". Then inport the file into that created database
