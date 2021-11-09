@@ -7,7 +7,7 @@ class ApiMiddleware extends BaseMiddleWare {
         $token = $request->get('HTTP_API_TOKEN', false);
         if(!$token) {
             \App\Response::setStatusCode('401');
-            echo '401 Unauthorized';
+            echo '401 Unauthorized'.PHP_EOL;
             exit();
         }
     }
