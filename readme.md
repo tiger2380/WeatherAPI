@@ -43,7 +43,7 @@ $ git clone https://github.com/tiger2380/WeatherAPI.git
 ```
 $ cd WeatherAPI
 ```
-**Edit the App/Settings.php file -> db stanza to match your local Database settings**
+**Edit the App/Settings.php file -> db stanza to match your local database settings**
 ```
 $ vi App/Settings.php
 ...
@@ -60,3 +60,15 @@ $ vi App/Settings.php
 ```
 * I included the dump of the database (WeatherAPI.sql)
 * To save time, you can import the dump file into your database. Create a new database and name it to "WeatherAPI". Then inport the file into that created database
+
+### That's it. You should now be ready to test the API
+
+
+In the brower, you can navigate to e.g. http://localhost/WeatherAPI/api/weather/office/forecast and you will see a 401 Unauthorized message. That is because the Api-Token key must be set in the header.
+
+The tool that I used to test the API route is called PostMan. You can set the Api-Token key in the header request and you will be able to see the forecast data.
+You can also test the API from the command line: e.g. (linux)
+
+```
+$ curl -H "Api-Token: QkgAVGXuebE9beJEV6iaMKRWf4eDAtALwi9FibuXvR37HYqEJuQKmVdv9eUEyx88" http://localhost/WeatherAPI/api/weather/office/forecast
+```
