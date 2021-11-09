@@ -49,7 +49,7 @@ $ cd WeatherAPI
 
 **Edit the App/Settings.php file -> db stanza to match your local database settings**
 * I included the dump of the database (WeatherAPI.sql)
-* To save time, you can import the dump file into your database. Create a new database and name it to "WeatherAPI". Then inport the file into that created database
+* To save time, you can import the dump file into your database. Create a new database and name it "WeatherAPI". Then inport the file into that created database
 ```
 $ vi App/Settings.php
 ...
