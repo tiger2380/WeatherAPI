@@ -17,6 +17,6 @@ class ForecastModel extends Model {
         $response = $this->find($token)->result;
         $updateCount = (int)$response['UsageCount'] + 1;
 
-        \App\DB::run("UPDATE ApiToken SET UsageCount = $updateCount, LastUsedOn = Now() WHERE Token = '$token'");
+        \App\DB::run("UPDATE ApiToken SET UsageCount = ?, LastUsedOn = Now() WHERE Token = ?", [$updateCount, $token]);
     }
 }
