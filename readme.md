@@ -77,7 +77,7 @@ You can also test the API from the command line: e.g. (linux)
 $ curl -H "Api-Token: QkgAVGXuebE9beJEV6iaMKRWf4eDAtALwi9FibuXvR37HYqEJuQKmVdv9eUEyx88" http://localhost/WeatherAPI/api/weather/office/forecast
 ```
 
-I also created the API on my personal website https://thaddeusbibbs.me. Feel free access the test API by:
+I also created the API on my personal website https://thaddeusbibbs.me. Feel free to test the API by:
 ```
 $ curl -H "Api-Token: QkgAVGXuebE9beJEV6iaMKRWf4eDAtALwi9FibuXvR37HYqEJuQKmVdv9eUEyx88" https://thaddeusbibbs.me/dev/WeatherAPI/api/weather/office/forecast
 ```
