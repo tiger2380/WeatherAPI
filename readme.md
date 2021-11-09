@@ -5,6 +5,9 @@
 * [Setup](#setup)
 
 ## General Information
+
+**I used my own custom routing system that I created.**
+
 **Acceptance Criteria:**
 * Create an API endpoint - /api/weather/office/forecast
 * Consume the following URL for weather information - https://api.weather.gov/gridpoints/OKX/31,34/forecast
@@ -43,7 +46,10 @@ $ git clone https://github.com/tiger2380/WeatherAPI.git
 ```
 $ cd WeatherAPI
 ```
+
 **Edit the App/Settings.php file -> db stanza to match your local database settings**
+* I included the dump of the database (WeatherAPI.sql)
+* To save time, you can import the dump file into your database. Create a new database and name it to "WeatherAPI". Then inport the file into that created database
 ```
 $ vi App/Settings.php
 ...
@@ -58,8 +64,6 @@ $ vi App/Settings.php
     ]
 ...
 ```
-* I included the dump of the database (WeatherAPI.sql)
-* To save time, you can import the dump file into your database. Create a new database and name it to "WeatherAPI". Then inport the file into that created database
 
 ### That's it. You should now be ready to test the API
 
@@ -71,4 +75,9 @@ You can also test the API from the command line: e.g. (linux)
 
 ```
 $ curl -H "Api-Token: QkgAVGXuebE9beJEV6iaMKRWf4eDAtALwi9FibuXvR37HYqEJuQKmVdv9eUEyx88" http://localhost/WeatherAPI/api/weather/office/forecast
+```
+
+I also created the API on my personal website https://thaddeusbibbs.me. Feel free access the test API by:
+```
+$ curl -H "Api-Token: QkgAVGXuebE9beJEV6iaMKRWf4eDAtALwi9FibuXvR37HYqEJuQKmVdv9eUEyx88" https://thaddeusbibbs.me/dev/WeatherAPI/api/weather/office/forecast
 ```
